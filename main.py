@@ -103,7 +103,7 @@ for i in range(1, 3069):
         file = open(f'./manual/test_{i}_manu_attri.txt', 'r')
 
     content = file.readlines()
-    rows.append([filename+".jpg", content[5].replace('0', 'male').replace('1','female').replace('2', 'unsure').replace("\n", ""), content[6].replace('0','Caucasian').replace("1","African-American").replace("2","Asian").replace("\n", ""), AgeToCsv(content[7].replace('\n', '').replace(" ","")), "test"])
+    rows.append([filename+".jpg", content[5].replace('0', 'male').replace('1','female').replace('2', 'unsure').replace("\n", ""), content[6].replace('0','Caucasian').replace("1","African-American").replace("2","Asian").replace("\n", ""), AgeToCsv(content[7].replace('\n', '').replace(" ","")), AgeToCsv(content[7].replace('\n', '').replace(" ","")), "test"])
     gender.append(content[5])
     race.append(content[6])
     age.append(content[7])
@@ -133,7 +133,7 @@ for i in range(1, 12272):
         file = open(f'./manual/train_{i}_manu_attri.txt', 'r')
         filename = f"train_{i}_aligned"
     content = file.readlines()
-    rows.append([filename+".jpg", content[5].replace('0', 'male').replace('1','female').replace('2', 'unsure').replace("\n", ""), content[6].replace('0','Caucasian').replace("1","African-American").replace("2","Asian").replace("\n", ""), AgeToCsv(content[7].replace('\n', '').replace(" ","")), "train"])
+    rows.append([filename+".jpg", content[5].replace('0', 'male').replace('1','female').replace('2', 'unsure').replace("\n", ""), content[6].replace('0','Caucasian').replace("1","African-American").replace("2","Asian").replace("\n", ""), AgeToCsv(content[7].replace('\n', '').replace(" ","")), AgeToCsv(content[7].replace('\n', '').replace(" ","")), "train"])
     gender.append(content[5])
     race.append(content[6])
     age.append(content[7])
@@ -146,7 +146,7 @@ with open(filename, 'w') as csvfile:
     csvwriter = csv.writer(csvfile)
      
     # writing the fields
-    csvwriter.writerow(["filename", "gender", "race", "age", "split"])
+    csvwriter.writerow(["filename", "gender", "race", "age", "age_range", "split"])
      
     # writing the data rows
     csvwriter.writerows(rows)
