@@ -111,8 +111,8 @@ with open("./dataset.csv", 'r') as file:
   dvad39arr.append(dvad39/k)
   sor69arr.append(sor69/k)
 
-  maleArr.append(male)
-  femaleArr.append(female)
+  maleArr.append(male/k)
+  femaleArr.append(female/k)
     
 
 with open("./rafdbcsv.csv", 'r') as file:
@@ -171,8 +171,8 @@ with open("./rafdbcsv.csv", 'r') as file:
   dvad39arr.append(dvad39/k)
   sor69arr.append(sor69/k)
 
-  maleArr.append(male)
-  femaleArr.append(female)
+  maleArr.append(male/k)
+  femaleArr.append(female/k)
 
 
 with open("./FireFace.csv", 'r') as file:
@@ -247,8 +247,8 @@ with open("./FireFace.csv", 'r') as file:
   sor69arr.append(sor69/k)
 
 
-  maleArr.append(male)
-  femaleArr.append(female)
+  maleArr.append(male/k)
+  femaleArr.append(female/k)
 
 # filename = "AllDatasets.csv"
 # fields = ['filename','gender','race','age','age_range','split']
