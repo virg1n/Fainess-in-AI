@@ -1,47 +1,35 @@
-# from collections import Counter
-# import matplotlib.pyplot as plt
-# import numpy as np
-# import csv
+from collections import Counter
+import matplotlib.pyplot as plt
+import numpy as np
+import csv
 import random
  
-# # field names
-# fields = ['Name', 'Branch', 'Year', 'CGPA']
- 
-# # data rows of csv file
-# rows = [ ['Nikhil', 'COE', '2', '9.0'],
-#         ['Sanchit', 'COE', '2', '9.1'],
-#         ['Aditya', 'IT', '2', '9.3'],
-#         ['Sagar', 'SE', '1', '9.5'],
-#         ['Prateek', 'MCE', '3', '7.8'],
-#         ['Sahil', 'EP', '2', '9.1']]
- 
-# # name of csv file
-# filename = "university_records.csv"
- 
-# # writing to csv file
-# with open(filename, 'w') as csvfile:
-#     # creating a csv writer object
-#     csvwriter = csv.writer(csvfile)
-     
-#     # writing the fields
-#     csvwriter.writerow(fields)
-     
-#     # writing the data rows
-#     csvwriter.writerows(rows)
+# labels = ['2017', '2018', '2019', '2020', '2021']
+# android_users = np.array([25, 25.1, 26, 26.2, 26])
+# ios_users = np.array([14.5, 14.8, 13, 13.8, 14.0])
+# android_users1 = np.array([35, 35.1, 36, 36.2, 36])
+# ios_users1 = np.array([0, 10, 2, 13.8, 14.0])
 
-# lol = [['Name', 'Branch', 'Year', 'CGPA']]
+# width = 0.35       #Задаём ширину столбцов
+# fig, ax = plt.subplots()
+
+# ax.bar(labels, android_users, width, label='Android')
+# ax.bar(labels, ios_users, width, bottom=android_users,
+#       label='iOS')
+# ax.bar(labels, android_users1, width, bottom=(ios_users + android_users),
+#       label='Android1')
+# # ax.bar(labels, ios_users1, width, bottom=android_users1,
+# #       label='iOS1') #Указываем с помощью параметра bottom, что значения в столбце должны быть выше значений переменной android_users
+
+# ax.set_ylabel('Соотношение, в %')
+# ax.set_title('Распределение устройств на Android и iOS')
+# ax.legend(loc='lower left', title='Устройства') #Сдвигаем легенду в нижний левый угол, чтобы она не перекрывала часть графика 
+
+# plt.show()
 
 
-# with open(filename, 'w') as csvfile:
-#     # creating a csv writer object
-#     csvwriter = csv.writer(csvfile)
-     
-     
-#     # writing the data rows
-#     csvwriter.writerows(lol)
 
-a = [1, 2]
-a.append(3)
-a.append(4)
 
-print(a)
+arr = [1, 2, 3, 4]
+arr = np.array(arr)
+print(arr)
